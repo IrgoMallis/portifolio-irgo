@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  background: #edece4;
+  color: #3e3b32;
+  font-family: 'Cinzel', serif;
+  padding-top: 0;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #d4a373;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-family: 'IM Fell English SC', serif;
+  color: #d4a373;
+}
+
+.nav-link {
+  color: #3e3b32;
+}
+
+.nav-link:hover {
+  color: #d4a373;
+}
+
+#header-section {
+  width: 100%;
+  height: 400px;
+  background: url('https://i.imgur.com/wQsnKAT.jpg') no-repeat center center/cover;
+  border-bottom: 4px solid #d4a373;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3e3b32;
+  font-size: 2rem;
+  font-family: 'IM Fell English SC', serif;
+  margin-top: 56px; /* To offset the fixed navbar */
+}
+
+h1, h2 {
+  font-family: 'IM Fell English SC', serif;
+  color: #d4a373;
+}
+
+.quemsoueu{
+  text-align: justify;
+}
+
+/* Projects Carousel */
+.projects{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.carrossel-3d {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Aumenta o espaço para evitar sobreposição */
+  height: 300px; /* Aumenta a altura para evitar que corte */
+  margin: 50px auto; /* Adiciona margem superior e inferior */
+  perspective: 2000px; /* Dá mais profundidade ao efeito 3D */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides-3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Adiciona espaçamento entre os slides */
+}
+
+.slide-3d {
+  position: absolute;
+  width: 400px;
+  height: 320px; /* Aumenta a altura para acomodar o texto */
+  border: 2px solid #9e9887;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(234, 235, 227, 0.973);
+  box-shadow: 0 0 15px #3e3b32;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  padding: 15px;
+}
+
+.slide-3d a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.slide-3d h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tech-icons img {
+  width: 40px; /* Ajusta o tamanho dos ícones */
+  height: 40px;
+}
+
+.slide-3d img {
+  width: 100%;
+  height: 30px; /* Define um tamanho fixo para as imagens */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slide-3d p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.anterior-3d, .proximo-3d {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3e3b32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 18px;
+}
+
+.anterior-3d {
+  left: -80px; /* Move o botão para a esquerda */
+}
+
+.proximo-3d {
+  right: -70px; /* Move o botão para a direita */
+}
+
+/* Contact Section */
+.form-control {
+  border: 1px solid #d4a373;
+}
+
+.form-control:focus {
+  border-color: #f4e8c1;
+  box-shadow: none;
+}
+
+.btn {
+  background-color: #d4a373;
+  color: #3e3b32;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #f4e8c1;
+  color: #3e3b32;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carrossel-3d {
+    max-width: 100%;
+  }
+
+  .slides-3d {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .slide-3d {
+    width: 100%;
+  }
+
+  .controles-3d {
+    flex-direction: row;
+  }
+
+  .anterior-3d, .proximo-3d {
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  #header-section {
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .quemsoueu {
+    text-align: justify;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+}
